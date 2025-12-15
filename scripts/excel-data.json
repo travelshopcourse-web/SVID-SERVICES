@@ -1,0 +1,274 @@
+[
+  {
+    "sheetName": " STRUCTURAL DESIGN",
+    "data": [
+      {
+        "SL NO.": 1,
+        "PROJECT DESCRIPTION": "MWC EXHIBITION",
+        "LOCATION": "QATAR",
+        "SCOPE": "STRUCTURAL DESIGN OF PWC EXHIBITION BOOTH"
+      },
+      {
+        "SL NO.": 2,
+        "PROJECT DESCRIPTION": "EPC FOR METERING SYSTEM IMPROVEMENT PROJ. ",
+        "LOCATION": "UAE",
+        "SCOPE": "SKID STRUCTURAL DESIGN AND CALCULATION"
+      },
+      {
+        "SL NO.": 3,
+        "PROJECT DESCRIPTION": "BULKHEAD SIGNBOARD",
+        "LOCATION": "KSA",
+        "SCOPE": "STRUCTURAL DESIGN AND CALCULATION"
+      },
+      {
+        "SL NO.": 4,
+        "PROJECT DESCRIPTION": "AL MARKHIYA SCHOOL",
+        "LOCATION": "QATAR",
+        "SCOPE": "GLASS BALUSTRADE"
+      },
+      {
+        "SL NO.": 5,
+        "PROJECT DESCRIPTION": "QASSWA",
+        "LOCATION": "KSA",
+        "SCOPE": "METAL FRAME- WALL, FLOOR, CEILING"
+      },
+      {
+        "SL NO.": 6,
+        "PROJECT DESCRIPTION": "RLTO EXPANSION AND OFFPLOT FACILITIES OF THE NORTH FIELD EXPANSION \r\nPROJECT (EPC-3),  ",
+        "LOCATION": "QATAR",
+        "SCOPE": "STRUCTURAL DESIGN AND CALCULATION"
+      },
+      {
+        "SL NO.": 7,
+        "PROJECT DESCRIPTION": "SHOBHA DC- EGYPTIAN ARMANENT AUTHORIYTY",
+        "LOCATION": "DUBAI",
+        "SCOPE": "STRUCTURAL CALCULATION OF DUST COLLECTOR"
+      },
+      {
+        "SL NO.": 8,
+        "PROJECT DESCRIPTION": "SUPPORT FRAME",
+        "LOCATION": "QATAR",
+        "SCOPE": "STRUCTURAL DESIGN AND CALCULATION"
+      },
+      {
+        "SL NO.": 9,
+        "PROJECT DESCRIPTION": "LUSAIL PLAZA INFRASTRUCTURE",
+        "LOCATION": "KSA",
+        "SCOPE": "GRATING"
+      },
+      {
+        "SL NO.": 10,
+        "PROJECT DESCRIPTION": "CARREFOUR HYPERMARKET VILLAGIO MALL",
+        "LOCATION": "QATAR",
+        "SCOPE": "MEZZANINE FLOOR"
+      },
+      {
+        "SL NO.": 11,
+        "PROJECT DESCRIPTION": "CP28B: DESIGN AND BUILD OF INFRASTRUCTURE AND LANDSCAPE WORKS FOR HUZOOM ",
+        "LOCATION": "QATAR",
+        "SCOPE": "STAINLESS STEEL WORKS"
+      },
+      {
+        "SL NO.": 12,
+        "PROJECT DESCRIPTION": "AL BUSTAN RETAIL & RESINDENTIAL\r\nBUILDING",
+        "LOCATION": "KSA",
+        "SCOPE": "HANDRAIL"
+      },
+      {
+        "SL NO.": 13,
+        "PROJECT DESCRIPTION": "DESIGN & BUILD OF ROAD & INFRASTRUCTURE",
+        "LOCATION": "QATAR",
+        "SCOPE": "LOUVER"
+      },
+      {
+        "SL NO.": 14,
+        "PROJECT DESCRIPTION": "ONESTEP DECK TRAILER ",
+        "LOCATION": "OMAN",
+        "SCOPE": "STRUCTURAL DESIGN AND CALCULATION"
+      },
+      {
+        "SL NO.": 15,
+        "PROJECT DESCRIPTION": "ADVENTURE PARK",
+        "LOCATION": "INDIA",
+        "SCOPE": "ZIPLINE AND GLASS BRIDGE"
+      },
+      {
+        "SL NO.": 16,
+        "PROJECT DESCRIPTION": "CORAL ANTI POLLUTION SYSTEM",
+        "LOCATION": "KSA",
+        "SCOPE": "DUST COLLECTOR"
+      },
+      {
+        "SL NO.": 17,
+        "PROJECT DESCRIPTION": "ACCESS PLATFORM",
+        "LOCATION": "KSA",
+        "SCOPE": "STRUCTURAL DETAILING AND DRAWING"
+      },
+      {
+        "SL NO.": 18,
+        "PROJECT DESCRIPTION": "SKYLIGHT",
+        "LOCATION": "QATAR",
+        "SCOPE": "STRUCTURAL CALCULATION"
+      },
+      {
+        "SL NO.": 19,
+        "PROJECT DESCRIPTION": "CITY CENTER",
+        "LOCATION": "QATAR",
+        "SCOPE": "FRAME"
+      },
+      {
+        "SL NO.": 20,
+        "PROJECT DESCRIPTION": "TEMPLE BUILDING RENOVATION",
+        "LOCATION": "OMAN",
+        "SCOPE": "SCAFFOLDING STRUCTURAL CALCULATION"
+      },
+      {
+        "SL NO.": 21,
+        "PROJECT DESCRIPTION": "CAGE LADDER",
+        "LOCATION": "QATAR",
+        "SCOPE": "STRUCTURAL CALCULATION"
+      }
+    ]
+  },
+  {
+    "sheetName": "FABRICATION DRAWING",
+    "data": [
+      {
+        "SL NO.": 1,
+        "PROJECT DESCRIPTION": "EPC FOR METERING SYSTEM IMPROVEMENT PROJ. ",
+        "LOCATION": "UAE",
+        "SCOPE": "SKID LIFTING ARRANGEMENT "
+      },
+      {
+        "SL NO.": 2,
+        "PROJECT DESCRIPTION": "MAKKAH ENTERTAINMENT COMPLEX",
+        "LOCATION": "KSA",
+        "SCOPE": "CAGE LADDER, HANDRAIL, GRATING, INTERSECTION GATE, FUEL TANK, ROOF ACCESS COVER, FENCE"
+      },
+      {
+        "SL NO.": 3,
+        "PROJECT DESCRIPTION": "OBHUR ENTERTAINMENT COMPLEX",
+        "LOCATION": "KSA",
+        "SCOPE": "HANDRAIL, BAR GRATING, ACCESS LADDER, ELECTRIC TRENCH"
+      },
+      {
+        "SL NO.": 4,
+        "PROJECT DESCRIPTION": "MWC EXHIBITION",
+        "LOCATION": "QATAR",
+        "SCOPE": "SHOP DRAWING- PWC EXHIBITION BOOTH"
+      },
+      {
+        "SL NO.": 5,
+        "PROJECT DESCRIPTION": "BULKHEAD SIGNBOARD",
+        "LOCATION": "KSA",
+        "SCOPE": "SHOP DRAWING"
+      },
+      {
+        "SL NO.": 6,
+        "PROJECT DESCRIPTION": "QASSWA",
+        "LOCATION": "KSA",
+        "SCOPE": "FABRICATION DRAWING OF METAL FRAMES- WALL, FLOOR, CEILING"
+      },
+      {
+        "SL NO.": 7,
+        "PROJECT DESCRIPTION": "CARREFOUR HYPERMARKET VILLAGIO MALL",
+        "LOCATION": "QATAR",
+        "SCOPE": "MEZZANINE FLOOR SHOP DRAWING"
+      },
+      {
+        "SL NO.": 8,
+        "PROJECT DESCRIPTION": "HAVELOCK ONE INTERIOR SOLUTIONS",
+        "LOCATION": "BAHRAIN",
+        "SCOPE": "ECOLOGY UNIT HANGING FRAME"
+      },
+      {
+        "SL NO.": 9,
+        "PROJECT DESCRIPTION": "ADVENTURE PARK",
+        "LOCATION": "INDIA",
+        "SCOPE": "ZIPLINE AND GLASS BRIDGE"
+      },
+      {
+        "SL NO.": 10,
+        "PROJECT DESCRIPTION": "CORAL ANTI POLLUTION SYSTEM",
+        "LOCATION": "KSA",
+        "SCOPE": "DUST COLLECTOR FABRICATION DRAWING"
+      },
+      {
+        "SL NO.": 11,
+        "PROJECT DESCRIPTION": "EMBEDDED PLATE",
+        "LOCATION": "KSA",
+        "SCOPE": "FABRICATION DRAWING"
+      },
+      {
+        "SL NO.": 12,
+        "PROJECT DESCRIPTION": "CAR SHADE",
+        "LOCATION": "KSA",
+        "SCOPE": "FABRICATION DRAWING"
+      },
+      {
+        "SL NO.": 13,
+        "PROJECT DESCRIPTION": "WARE HOUSE SHADE",
+        "LOCATION": "KSA",
+        "SCOPE": "SHOP DRAWING"
+      }
+    ]
+  },
+  {
+    "sheetName": "3D",
+    "data": [
+      {
+        "SL NO.": 1,
+        "PROJECT DESCRIPTION": "TEA STAR CAFETERIA",
+        "LOCATION": "QATAR",
+        "SCOPE": "3D DESIGN"
+      },
+      {
+        "SL NO.": 2,
+        "PROJECT DESCRIPTION": "GUEST BEDROOM",
+        "LOCATION": "CYPRUS",
+        "SCOPE": "3D DESIGN"
+      },
+      {
+        "SL NO.": 3,
+        "PROJECT DESCRIPTION": "MINISTRY OF DEFENSE",
+        "LOCATION": "KSA",
+        "SCOPE": "3D DESIGN"
+      },
+      {
+        "SL NO.": 4,
+        "PROJECT DESCRIPTION": "CAR SHADE",
+        "LOCATION": "KSA",
+        "SCOPE": "3D DESIGN"
+      },
+      {
+        "SL NO.": 5,
+        "PROJECT DESCRIPTION": "SPOOL",
+        "LOCATION": "QATAR",
+        "SCOPE": "3D DESIGN"
+      },
+      {
+        "SL NO.": 6,
+        "PROJECT DESCRIPTION": "OFFICE SPACE",
+        "LOCATION": "KSA",
+        "SCOPE": "3D DESIGN"
+      }
+    ]
+  },
+  {
+    "sheetName": "BIM WORKS",
+    "data": [
+      {
+        "SL NO.": 1,
+        "PROJECT DESCRIPTION": "MAKKAH ENTERTAINMENT COMPLEX",
+        "LOCATION": "SAUDI ARABIA",
+        "SCOPE": "CAGE LADDER, HANDRAIL, GRATING, INTERSECTION GATE, FUEL TANK, ROOF ACCESS COVER, FENCE, GLASS BALUSTRADE, FOOTRAIL"
+      },
+      {
+        "SL NO.": 2,
+        "PROJECT DESCRIPTION": "OBHUR ENTERTAINMENT COMPLEX",
+        "LOCATION": "SAUDI ARABIA",
+        "SCOPE": "HANDRAIL, BAR GRATING, ACCESS LADDER, ELECTRIC TRENCH"
+      }
+    ]
+  }
+]
