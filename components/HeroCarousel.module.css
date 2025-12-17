@@ -1,0 +1,300 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Slides */
+.slidesWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1),
+              visibility 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+/* Background */
+.slideBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide.active .slideImage {
+  transform: scale(1.05);
+}
+
+.slideOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+}
+
+/* Content */
+.slideContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.textWrapper {
+  max-width: 800px;
+}
+
+.titleWrapper,
+.subtitleWrapper,
+.descriptionWrapper {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.title.animateIn {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subtitle.animateIn {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.description.animateIn {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+/* Navigation */
+.navigation {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0 4rem;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Counter */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #ffffff;
+}
+
+.currentNumber {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.divider {
+  width: 4rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.totalNumber {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Navigation buttons */
+.navButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.navButton {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.navButton:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Progress bar */
+.progressBar {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #ffffff;
+  transition: width 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Thumbnails */
+.thumbnails {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thumbnail {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.6;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail.thumbnailActive {
+  opacity: 1;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnailOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail.thumbnailActive .thumbnailOverlay {
+  opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .thumbnails {
+    display: none;
+  }
+  
+  .slideContent {
+    padding: 0 2rem;
+  }
+  
+  .navigation {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .currentNumber {
+    font-size: 2rem;
+  }
+  
+  .divider {
+    width: 3rem;
+  }
+}

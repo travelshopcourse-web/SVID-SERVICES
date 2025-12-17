@@ -105,6 +105,50 @@ To empower construction and engineering companies with detailed, cost-effective,
     }
   ],
   
+  projectGallery: {
+    "3d": [
+      { id: 1, src: "/project_images/3d/cafeteria-view-1.jpg", title: "Tea Star Cafeteria", category: "Interior Design" },
+      { id: 2, src: "/project_images/3d/cafeteria-view-2.jpg", title: "Tea Star Cafeteria - View 2", category: "Interior Design" },
+      { id: 3, src: "/project_images/3d/guest-bedroom-interior-1.jpg", title: "Guest Bedroom Cyprus", category: "Interior Design" },
+      { id: 4, src: "/project_images/3d/guest-bedroom-interior-2.jpg", title: "Guest Bedroom - View 2", category: "Interior Design" },
+      { id: 5, src: "/project_images/3d/guest-bedroom-interior-3.jpg", title: "Guest Bedroom - View 3", category: "Interior Design" },
+      { id: 6, src: "/project_images/3d/guest-bedroom-interior-4.jpg", title: "Guest Bedroom - View 4", category: "Interior Design" }
+    ],
+    bim: [
+      { id: 1, src: "/project_images/bim/bim-model-1.jpg", title: "BIM Model - Makkah Complex", category: "BIM Modeling" },
+      { id: 2, src: "/project_images/bim/bim-model-2.jpg", title: "BIM Model - Entertainment Complex", category: "BIM Modeling" },
+      { id: 3, src: "/project_images/bim/bim-model-3.jpg", title: "BIM Model - Structural Detail", category: "BIM Modeling" },
+      { id: 4, src: "/project_images/bim/bim-model-4.jpg", title: "BIM Model - Infrastructure", category: "BIM Modeling" },
+      { id: 5, src: "/project_images/bim/fence.jpg", title: "Fence Design", category: "BIM Detail" },
+      { id: 6, src: "/project_images/bim/glass-balustrade.jpg", title: "Glass Balustrade", category: "BIM Detail" },
+      { id: 7, src: "/project_images/bim/intersection-gate.jpg", title: "Intersection Gate", category: "BIM Detail" },
+      { id: 8, src: "/project_images/bim/ladder.png", title: "Ladder Design", category: "BIM Detail" },
+      { id: 9, src: "/project_images/bim/stair.jpg", title: "Staircase Design", category: "BIM Detail" },
+      { id: 10, src: "/project_images/bim/trench-cover.png", title: "Trench Cover", category: "BIM Detail" },
+      { id: 11, src: "/project_images/bim/trolley.jpg", title: "Trolley Design", category: "BIM Detail" },
+      { id: 12, src: "/project_images/bim/bim-stair.jpg", title: "BIM Stair Detail", category: "BIM Detail" }
+    ],
+    shp: [
+      { id: 1, src: "/project_images/shp/car-shade.jpg", title: "Car Shade Structure", category: "Shop Drawing" },
+      { id: 2, src: "/project_images/shp/shp-capture.png", title: "Shop Drawing Detail", category: "Shop Drawing" },
+      { id: 3, src: "/project_images/shp/exhibition-booth-isometric-3d.png", title: "Exhibition Booth 3D", category: "Shop Drawing" },
+      { id: 4, src: "/project_images/shp/shp-model-1.jpg", title: "Shop Drawing Model", category: "Shop Drawing" },
+      { id: 5, src: "/project_images/shp/shp-model-2.jpg", title: "Shop Drawing Detail View", category: "Shop Drawing" },
+      { id: 6, src: "/project_images/shp/embedded-plate.png", title: "Embedded Plate Detail", category: "Shop Drawing" }
+    ],
+    structural_design: [
+      { id: 1, src: "/project_images/structural_design/exhibition-booth.png", title: "Exhibition Booth Structure", category: "Structural Design" },
+      { id: 2, src: "/project_images/structural_design/structural-model-1.jpg", title: "Structural Design - Qatar", category: "Structural Design" },
+      { id: 3, src: "/project_images/structural_design/structural-model-2.jpg", title: "Structural Framework", category: "Structural Design" },
+      { id: 4, src: "/project_images/structural_design/structural-model-3.jpg", title: "Steel Structure Detail", category: "Structural Design" },
+      { id: 5, src: "/project_images/structural_design/structural-model-4.jpg", title: "Structural Analysis", category: "Structural Design" },
+      { id: 6, src: "/project_images/structural_design/structural-calculation-screenshot.png", title: "Structural Calculations", category: "Structural Design" },
+      { id: 7, src: "/project_images/structural_design/trolley.png", title: "Trolley Structure", category: "Structural Design" },
+      { id: 8, src: "/project_images/structural_design/mezzanine-floor-qatar.jpg", title: "Mezzanine Floor - Qatar", category: "Structural Design" },
+      { id: 9, src: "/project_images/structural_design/steel-structure-frame-calculation-qatar.jpg", title: "Steel Frame Calculation - Qatar", category: "Structural Design" }
+    ]
+  },
+
   projectModules: [
     {
       name: "STRUCTURAL DESIGN",

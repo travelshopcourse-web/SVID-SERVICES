@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import NavigationLoader from "@/components/NavigationLoader";
 import StructuredData from "@/components/StructuredData";
 import { siteData } from "@/lib/data";
 import LayoutClient from "@/components/LayoutClient";
@@ -109,6 +110,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <Loader />
+        <NavigationLoader />
         <LayoutClient>
           <Header />
           <main className="min-h-screen">{children}</main>

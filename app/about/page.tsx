@@ -338,15 +338,39 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-amber-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-600 transition-colors shadow-lg hover:shadow-xl inline-block"
+              className="group relative bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-block border border-amber-400/50 overflow-hidden"
             >
-              Contact Us
+              {/* Subtle grid */}
+              <div className="absolute inset-0 opacity-10" style={{
+                backgroundImage: 'linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px)',
+                backgroundSize: '16px 16px'
+              }}></div>
+              {/* Shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <span className="relative z-10 flex items-center gap-2 justify-center">
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact Us
+              </span>
             </Link>
             <Link
               href="/projects"
-              className="bg-white text-slate-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-slate-100 transition-colors shadow-lg hover:shadow-xl inline-block"
+              className="group relative bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-block border border-slate-300 hover:border-amber-500 overflow-hidden"
             >
-              View Projects
+              {/* Subtle pattern */}
+              <div className="absolute inset-0 opacity-5" style={{
+                backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)',
+                backgroundSize: '12px 12px'
+              }}></div>
+              {/* Shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-amber-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span className="relative z-10 group-hover:text-amber-600 transition-colors duration-300 flex items-center gap-2 justify-center">
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                View Projects
+              </span>
             </Link>
           </div>
         </div>
