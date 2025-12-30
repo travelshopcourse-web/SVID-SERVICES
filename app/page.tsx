@@ -9,18 +9,15 @@ export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [showPdfModal, setShowPdfModal] = useState(false);
   const [showPortfolioBadge, setShowPortfolioBadge] = useState(true);
+  const [isContentLoaded, setIsContentLoaded] = useState(false);
 
-  // Auto-open portfolio on first visit
+  // Trigger animations after loader completes
   useEffect(() => {
-    const hasViewedPortfolio = localStorage.getItem('hasViewedPortfolio');
-    if (!hasViewedPortfolio) {
-      // Auto-open after 2 seconds on first visit
-      const timer = setTimeout(() => {
-        setShowPdfModal(true);
-        localStorage.setItem('hasViewedPortfolio', 'true');
-      }, 2000);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      setIsContentLoaded(true);
+    }, 2400); // Slightly after loader finishes (2200ms)
+
+    return () => clearTimeout(timer);
   }, []);
 
   // Auto-advance carousel
@@ -90,20 +87,35 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-500 via-slate-800 to-slate-900 pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-20">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero_section/MAKKAHENTERTAINMENTMALLKSA.jpg"
+            alt="Makkah Entertainment Mall"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+            quality={90}
+          />
+          {/* Gradient overlays for better text visibility and aesthetics */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/75 via-slate-900/50 to-slate-900/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-transparent to-slate-900/60"></div>
+        </div>
+
         {/* Decorative Elements */}
-        <div className="absolute top-32 right-20 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 left-20 w-[32rem] h-[32rem] bg-slate-700/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-orange-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-32 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse z-[1]" />
+        <div className="absolute bottom-20 left-20 w-[32rem] h-[32rem] bg-orange-600/15 rounded-full blur-3xl animate-pulse z-[1]" style={{ animationDelay: '1s' }} />
 
         {/* Glassmorphism Badge */}
-        <div className="absolute top-24 md:top-24 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm px-3 py-1.5 md:px-6 md:py-2 rounded-full border border-white/20 text-white text-xs md:text-sm font-medium opacity-0 animate-fade-in animate-float" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
+        <div className="absolute top-24 md:top-24 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md px-3 py-1.5 md:px-6 md:py-2 rounded-full border border-white/20 text-white text-xs md:text-sm font-medium opacity-0 animate-fade-in animate-float z-[2]" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
           ✨ {siteData.certification.name}
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           <div className="max-w-5xl mx-auto">
-            <div className="mb-8 inline-block opacity-0 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <div className={`mb-8 inline-block transition-opacity duration-1000 ${isContentLoaded ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: isContentLoaded ? '0.2s' : '0s' }}>
               <Image
                 src={siteData.logo}
                 alt={siteData.name}
@@ -113,53 +125,69 @@ export default function Home() {
                 priority
               />
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight opacity-0 animate-slide-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl transition-opacity duration-1000 ${isContentLoaded ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: isContentLoaded ? '0.4s' : '0s' }}>
               {siteData.tagline}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed opacity-0 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+            <p className={`text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg transition-opacity duration-1000 ${isContentLoaded ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: isContentLoaded ? '0.6s' : '0s' }}>
               {siteData.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 opacity-0 animate-slide-up" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 transition-opacity duration-1000 ${isContentLoaded ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: isContentLoaded ? '0.8s' : '0s' }}>
               <Link
                 href="/services"
-                className="group relative bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-orange-500/40 hover:scale-105 overflow-hidden border border-orange-400/50"
+                className={`group relative bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-700 ease-out shadow-2xl hover:shadow-orange-500/50 hover:scale-105 hover:-translate-y-1 overflow-hidden border-2 border-orange-400/50 backdrop-blur-sm ${isContentLoaded ? 'animate-smooth-scale' : ''}`}
+                style={{ animationDelay: isContentLoaded ? '0.9s' : '0s', animationFillMode: 'forwards', backgroundSize: '200% 100%' }}
               >
-                {/* Subtle grid */}
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out"></div>
+                {/* Grid pattern */}
                 <div className="absolute inset-0 opacity-10" style={{
                   backgroundImage: 'linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px)',
-                  backgroundSize: '16px 16px'
+                  backgroundSize: '20px 20px'
                 }}></div>
-                {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                <span className="relative z-10 flex items-center gap-2">
-                  <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500 ease-out"></div>
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-orange-400 blur-xl opacity-0 group-hover:opacity-40 transition-all duration-700 ease-out -z-10"></div>
+                <span className="relative z-10 flex items-center gap-3 group-hover:gap-4 transition-all duration-500 ease-out">
+                  <svg className="w-6 h-6 group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
-                  Our Services
+                  <span className="tracking-wide">Our Services</span>
+                  <svg className="w-5 h-5 opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
                 </span>
               </Link>
               <Link
                 href="/contact"
-                className="group relative bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 border border-slate-300 hover:border-orange-500 overflow-hidden"
+                className={`group relative bg-white/95 backdrop-blur-sm text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-700 ease-out shadow-2xl hover:shadow-white/30 hover:scale-105 hover:-translate-y-1 border-2 border-white overflow-hidden ${isContentLoaded ? 'animate-smooth-scale' : ''}`}
+                style={{ animationDelay: isContentLoaded ? '1s' : '0s', animationFillMode: 'forwards' }}
               >
-                {/* Subtle pattern */}
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-orange-100 to-white opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out"></div>
+                {/* Pattern */}
                 <div className="absolute inset-0 opacity-5" style={{
-                  backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)',
-                  backgroundSize: '12px 12px'
+                  backgroundImage: 'radial-gradient(circle, #000 1.5px, transparent 1.5px)',
+                  backgroundSize: '16px 16px'
                 }}></div>
-                {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span className="relative z-10 group-hover:text-orange-600 transition-colors duration-300 flex items-center gap-2">
-                  <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                {/* Shimmer */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-200/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500 ease-out"></div>
+                {/* Glow */}
+                <div className="absolute inset-0 rounded-xl bg-orange-300 blur-xl opacity-0 group-hover:opacity-30 transition-all duration-700 ease-out -z-10"></div>
+                <span className="relative z-10 group-hover:text-orange-600 transition-colors duration-500 ease-out flex items-center gap-3 group-hover:gap-4">
+                  <svg className="w-6 h-6 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  Contact Us
+                  <span className="tracking-wide">Contact Us</span>
+                  <svg className="w-5 h-5 opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
                 </span>
               </Link>
             </div>
             
             {/* Scroll Indicator */}
-            <div className="animate-bounce mt-12">
+            <div className={`mt-12 transition-opacity duration-700 ${isContentLoaded ? 'opacity-100 animate-bounce' : 'opacity-0'}`} style={{ transitionDelay: isContentLoaded ? '0.9s' : '0s' }}>
               <svg
                 className="w-6 h-6 text-white mx-auto"
                 fill="none"
@@ -354,7 +382,106 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold text-slate-900 mb-2 md:mb-3 text-lg md:text-xl">Global Reach</h3>
-              <p className="text-slate-600 text-sm md:text-base">Serving clients across India, Qatar, and Saudi Arabia</p>
+              <p className="text-slate-600 text-sm md:text-base">Serving clients worldwide with successful projects across multiple continents</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Gallery */}
+      <section className="section-padding bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
+            <div className="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Our Portfolio
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent mb-4">
+              Featured Projects
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
+              Explore our diverse portfolio of successfully completed projects
+            </p>
+          </div>
+
+          {/* Horizontal Scrolling Gallery */}
+          <div className="relative group">
+            {/* Left Arrow Button */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('projects-scroll');
+                if (container) {
+                  container.scrollBy({ left: -320, behavior: 'smooth' });
+                }
+              }}
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 backdrop-blur-sm hover:bg-white shadow-xl rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 border-2 border-slate-200 hover:border-orange-500 group/arrow"
+              aria-label="Scroll left"
+            >
+              <svg className="w-5 h-5 md:w-6 md:h-6 text-slate-700 group-hover/arrow:text-orange-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Right Arrow Button */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('projects-scroll');
+                if (container) {
+                  container.scrollBy({ left: 320, behavior: 'smooth' });
+                }
+              }}
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 backdrop-blur-sm hover:bg-white shadow-xl rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 border-2 border-slate-200 hover:border-orange-500 group/arrow"
+              aria-label="Scroll right"
+            >
+              <svg className="w-5 h-5 md:w-6 md:h-6 text-slate-700 group-hover/arrow:text-orange-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            
+            {/* Scrollable container */}
+            <div id="projects-scroll" className="overflow-x-auto overflow-y-hidden scrollbar-hide pb-4 scroll-smooth" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              <div className="flex gap-4 md:gap-6 px-4 md:px-16">
+                {[
+                  { name: 'Al Qasswa, KSA', image: 'ALQASSWAKSA.jpg' },
+                  { name: 'Carrefour Hypermarket, Qatar', image: 'CARREFOURHYPERMARKETQATAR.jpg' },
+                  { name: 'City Center Mall, Qatar', image: 'CITYCENTERMALLQATAR.jpg' },
+                  { name: 'Glass Bridge, India', image: 'GLASSBRIDGEINDIA.jpg' },
+                  { name: 'Huzoom Villas, Qatar', image: 'HUZOOMVILLASQATAR.jpg' },
+                  { name: 'Lusail City, Qatar', image: 'LUSAILCITYQATAR.jpg' },
+                  { name: 'Magrabi Dust Extraction System', image: 'MAGRABIDUSTEXTRACTIONSYSTEMRASALKHAIMA.jpg' },
+                  { name: 'Makkah Entertainment Mall, KSA', image: 'MAKKAHENTERTAINMENTMALLKSA.jpg' },
+                  { name: 'Obhur Entertainment Complex, KSA', image: 'OBHURENTERTAINMENTCOMPLEXKSA.jpg' },
+                  { name: 'One Step Deck Trailer, Oman', image: 'ONESTEPDECKTRAILEROMAN.jpg' },
+                  { name: 'PWC Exhibition Booth, Qatar', image: 'PWCEXHIBITIONBOOTHQATAR.jpg' },
+                  { name: 'Temple Building, Oman', image: 'TEMPLEBUILDINGOMAN.jpg' },
+                  { name: 'Umm Shaif Metering Skid, UAE', image: 'UMMSHAIFMETERINGSKIDUAE.jpg' },
+                  { name: 'Zakum Metering Skid Package, UAE', image: 'ZAKUMMETERINGSKIDPACKAGEDASISLANDUAE.jpg' }
+                ].map((project, index) => (
+                  <div
+                    key={index}
+                    className="flex-none w-72 md:w-96 group/item relative animate-fade-in"
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                      <Image
+                        src={`/hero_section/${project.image}`}
+                        alt={project.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover/item:scale-110"
+                        sizes="(max-width: 768px) 288px, 384px"
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-80 group-hover/item:opacity-90 transition-opacity duration-300"></div>
+                      
+                      {/* Project name */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                        <h3 className="text-white font-bold text-base md:text-lg leading-tight drop-shadow-lg">
+                          {project.name}
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -509,8 +636,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Testimonials Section - Commented out */}
+      {/* <section className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-[32rem] h-[32rem] bg-slate-700/30 rounded-full blur-3xl"></div>
         
@@ -523,13 +650,11 @@ export default function Home() {
               What Our Clients Say
             </h2>
             <p className="text-slate-300 max-w-2xl mx-auto text-lg">
-              Trusted by construction companies and developers across three countries
+              Trusted by construction companies and developers serving the globe
             </p>
           </div>
 
-          {/* Carousel Container */}
           <div className="max-w-4xl mx-auto relative">
-            {/* Testimonial Card */}
             <div className="relative overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-out"
@@ -581,7 +706,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full border border-white/20 transition-all duration-300 z-10 group"
@@ -601,7 +725,6 @@ export default function Home() {
               </svg>
             </button>
 
-            {/* Indicators */}
             <div className="flex justify-center gap-2 mt-8">
               {siteData.testimonials.map((_, index) => (
                 <button
@@ -618,7 +741,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="relative section-padding bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 text-white overflow-hidden">

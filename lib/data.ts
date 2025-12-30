@@ -11,7 +11,7 @@ export const siteData = {
     phones: {
       india: "+91 79943 43312",
       qatar: "+974 3158 3580",
-      saudi: "+966 5733 16526",
+      saudi: "+966 57 092 3312",
       landline: "004742978053"
     },
     whatsapp: "+917994343312",
@@ -83,7 +83,7 @@ To empower construction and engineering companies with detailed, cost-effective,
       id: 7,
       title: "Fabrication Drawings",
       description: "Detailed, precise technical drawings for contractors and manufacturers.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/HXBgohVhQ89HOhynH4qM3NdlHm2AdcWr54VWR22R.png"
+      image: "/services/fabrication.jpeg"
     },
     {
       id: 8,

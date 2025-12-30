@@ -27,7 +27,7 @@ export default function AboutPage() {
     {
       year: "2023",
       title: "Leading Firm",
-      description: "Recognized as a leading design firm with 100+ successful projects across three countries.",
+      description: "Recognized as a leading design firm with 100+ successful projects serving the globe.",
     },
   ];
 
@@ -176,7 +176,7 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              From a small team to a leading design firm across three countries
+              From a small team to a leading design firm serving the globe
             </p>
           </div>
           
