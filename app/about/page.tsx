@@ -46,15 +46,16 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/50" />
         </div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <div className="inline-flex items-center gap-3 mb-6 bg-amber-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-amber-500/30">
+          <div className="inline-flex items-center gap-2 sm:gap-3 mb-6 bg-gradient-to-r from-amber-500/30 via-orange-500/25 to-amber-600/30 backdrop-blur-lg px-4 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-full border-2 border-amber-400/50 shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 hover:border-amber-300/70 hover:scale-105 transition-all duration-300 group cursor-default max-w-[95vw] mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
             <Image
               src={siteData.certification.image}
               alt={siteData.certification.name}
-              width={40}
-              height={40}
-              className="h-10 w-auto"
+              width={36}
+              height={36}
+              className="h-7 w-auto sm:h-9 md:h-10 drop-shadow-lg relative z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
             />
-            <span className="text-amber-400 font-semibold">
+            <span className="text-amber-100 group-hover:text-white font-bold text-xs sm:text-sm md:text-base tracking-wide drop-shadow-lg relative z-10 transition-colors duration-300 whitespace-nowrap">
               {siteData.certification.name}
             </span>
           </div>
@@ -65,15 +66,19 @@ export default function AboutPage() {
           <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
-              <span>15+ Years Experience</span>
+              <span>5+ Years Experience</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
-              <span>3 Countries</span>
+              <span>8 Countries</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
-              <span>100+ Projects</span>
+              <span>150+ Projects</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
+              <span>35+ Customers</span>
             </div>
           </div>
         </div>
@@ -84,10 +89,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { number: "15+", label: "Years of Excellence" },
-              { number: "100+", label: "Projects Completed" },
-              { number: "50+", label: "Expert Team" },
-              { number: "3", label: "Countries" },
+              { number: "5+", label: "Years of Excellence" },
+              { number: "150+", label: "Projects Completed" },
+              { number: "35+", label: "Happy Customers" },
+              { number: "8", label: "Countries Served" },
             ].map((stat, index) => (
               <div key={index} className="text-center text-white">
                 <div className="text-3xl md:text-5xl font-bold mb-2">{stat.number}</div>

@@ -108,9 +108,14 @@ export default function Home() {
         <div className="absolute top-32 right-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse z-[1]" />
         <div className="absolute bottom-20 left-20 w-[32rem] h-[32rem] bg-orange-600/15 rounded-full blur-3xl animate-pulse z-[1]" style={{ animationDelay: '1s' }} />
 
-        {/* Glassmorphism Badge */}
-        <div className="absolute top-24 md:top-24 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md px-3 py-1.5 md:px-6 md:py-2 rounded-full border border-white/20 text-white text-xs md:text-sm font-medium opacity-0 animate-fade-in animate-float z-[2]" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-          ✨ {siteData.certification.name}
+        {/* ISO Certification Badge */}
+        <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[2] group px-2">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/40 via-orange-500/40 to-amber-500/40 rounded-full blur-md md:blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" style={{ animationDuration: '3s' }}></div>
+          <div className="relative bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-md px-3 py-1.5 sm:px-5 sm:py-2.5 md:px-7 md:py-3 rounded-full border border-white/40 md:border-2 text-white text-[10px] sm:text-xs md:text-sm font-bold opacity-0 animate-fade-in animate-float shadow-lg md:shadow-xl hover:shadow-2xl hover:border-amber-300/60 hover:scale-105 transition-all duration-300" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
+            <span className="bg-gradient-to-r from-amber-100 via-white to-amber-100 bg-clip-text text-transparent drop-shadow-lg whitespace-nowrap">
+              {siteData.certification.name}
+            </span>
+          </div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
@@ -209,19 +214,19 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="opacity-0 animate-slide-up group cursor-default" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">500+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">150+</div>
               <p className="text-slate-600 font-medium transition-colors duration-300 group-hover:text-orange-600">Projects Completed</p>
             </div>
             <div className="opacity-0 animate-slide-up group cursor-default" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">15+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">5+</div>
               <p className="text-slate-600 font-medium transition-colors duration-300 group-hover:text-orange-600">Years Experience</p>
             </div>
             <div className="opacity-0 animate-slide-up group cursor-default" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">50+</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">35+</div>
               <p className="text-slate-600 font-medium transition-colors duration-300 group-hover:text-orange-600">Happy Clients</p>
             </div>
             <div className="opacity-0 animate-slide-up group cursor-default" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">3</div>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent mb-2 transition-all duration-500 group-hover:scale-110">8</div>
               <p className="text-slate-600 font-medium transition-colors duration-300 group-hover:text-orange-600">Countries Served</p>
             </div>
           </div>
@@ -631,7 +636,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12 animate-fade-in delay-700">
-            <p className="text-slate-500 text-sm md:text-base italic">Serving 100+ clients across India, Qatar, and Saudi Arabia</p>
+            <p className="text-slate-500 text-sm md:text-base italic">Serving 35+ clients across 8 countries including India, Qatar, and Saudi Arabia</p>
           </div>
         </div>
       </section>

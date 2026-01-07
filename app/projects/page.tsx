@@ -112,15 +112,15 @@ export default function ProjectsPage() {
           {/* Compact Stats */}
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-8">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-white">{projectCount}+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">100+</div>
               <div className="text-white/90 text-xs md:text-sm font-medium mt-1">Projects</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-white">{categoriesCount}</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">10+</div>
               <div className="text-white/90 text-xs md:text-sm font-medium mt-1">Categories</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-white">{imageCount}+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white">100+</div>
               <div className="text-white/90 text-xs md:text-sm font-medium mt-1">Gallery</div>
             </div>
           </div>

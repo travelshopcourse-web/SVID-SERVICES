@@ -258,7 +258,7 @@ To empower construction and engineering companies with detailed, cost-effective,
   ],
   
   certification: {
-    name: "ISO 9001 : 2015 Certified",
+    name: "✨ ISO 9001 : 2015 Certified",
     image: "https://images.eezix.site/user-7122/site-8698/section-4312/u8ymkNblBvsewSdGcNiO6LKAVJxdpQ1QgTCb2YZ3.png"
   },
 
