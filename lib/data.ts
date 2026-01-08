@@ -2,8 +2,8 @@ export const siteData = {
   name: "SVID Services",
   tagline: "Complete Architectural and Structural Solutions",
   description: "Designing the Future, Structuring Excellence",
-  logo: "https://images.eezix.site/user-7122/site-8698/section-20/xf0C9LG6LmXhPeTkeByMJcXN5xF0kwBsRqg5IvZb.png",
-  favicon: "https://images.eezix.site/user-7122/site-8698/section-17/QgJN88GwChIHledKwlhTifVKDuntMMkxEtHgU4F3.png",
+  logo: "/images/logo.png",
+  favicon: "/images/logo.png",
   
   contact: {
     email: "admin@svid.co.in",
@@ -28,7 +28,7 @@ export const siteData = {
   
   about: {
     title: "About Us",
-    image: "https://images.eezix.site/user-7122/site-8698/section-1/rXjFbgrwCNJvH6UGyyKGGlZ43S31h8Q0UNOlqJ2T.png",
+    image: "/images/about-hero.png",
     content: `<strong>SVID Services</strong> is a leading structural and architectural design firm based in Kerala, India, with regional presence in Qatar and Saudi Arabia. We specialize in delivering precise, innovative, and sustainable design solutions across sectors — from architectural concepts to full structural and MEP support.
 
 Our commitment to excellence is reflected in our wide array of services, integrating advanced tools like BIM and 3D rendering to help clients visualize, plan, and build effectively. With a team of experienced engineers, architects, and CAD professionals, we bring unmatched expertise to every stage of your project.
@@ -47,37 +47,37 @@ To empower construction and engineering companies with detailed, cost-effective,
       id: 1,
       title: "Structural Design",
       description: "Efficient, safe, and code-compliant designs for residential, commercial, and industrial structures.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/GXhzmLcRgB2fijA86ZYOSzTWgTFBcSFstBuySuvN.png"
+      image: "/services/structural-design.png"
     },
     {
       id: 2,
       title: "Design Consultancy",
       description: "Expert advisory and review services for all stages of your construction project.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/rYgAHdyQEHTcLLBOa1l18BM6xdnn8FlFw6iSC8GO.png"
+      image: "/services/design-consultancy.png"
     },
     {
       id: 3,
       title: "BIM Services",
       description: "Comprehensive Building Information Modeling for enhanced project coordination and visualization.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/KqZo6rtQnife3RBfYePz6CfsruoswwvQs3eYt893.png"
+      image: "/services/bim-services.png"
     },
     {
       id: 4,
       title: "Interior Design & 3D Rendering",
       description: "Custom interior designs with high-resolution renderings for real-world previews.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/TQBqGD2wHaIDEqYyH7rSWCeAZ656ChtU5FXASltx.png"
+      image: "/services/interior-3d.png"
     },
     {
       id: 5,
       title: "Steel Detailing",
       description: "Accurate and compliant detailing for steel structures, including fabrication and erection drawings.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/m9NmNoCwC4rDYnNCgZzXS7yp3ax22inLrKnsjJWW.png"
+      image: "/services/steel-detailing.png"
     },
     {
       id: 6,
       title: "Shop Drawings",
       description: "Detailed, precise technical drawings for contractors and manufacturers.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/3guWoLHgfw7cBQBa76KdrDgQ4PXc9DFHmsQjXik9.png"
+      image: "/services/shop-drawings.png"
     },
     {
       id: 7,
@@ -89,19 +89,19 @@ To empower construction and engineering companies with detailed, cost-effective,
       id: 8,
       title: "BOQ Preparation",
       description: "Bill of Quantities for cost estimation and tendering, prepared with precision.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/Y5dNd97wPd8J2xApJgs6V76NJ0JjYL1Y1g2uIe5Z.png"
+      image: "/services/boq-preparation.png"
     },
     {
       id: 9,
       title: "MEP Shop Drawings",
       description: "Drawings for mechanical, electrical, and plumbing systems integration.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/f6uv1qUzRfifh5VN711xUb47nVJyRjz6j2DZt4YG.png"
+      image: "/services/mep-drawings.png"
     },
     {
       id: 10,
       title: "Façade Design",
       description: "Innovative and practical façade systems that enhance the aesthetic and performance of buildings.",
-      image: "https://images.eezix.site/user-7122/site-8698/section-2/vGz0OsaEG6o7lj4i7TrNXANjFBxSvmz7ac6tIjMM.png"
+      image: "/services/facade-design.png"
     }
   ],
   
@@ -259,7 +259,7 @@ To empower construction and engineering companies with detailed, cost-effective,
   
   certification: {
     name: "✨ ISO 9001 : 2015 Certified",
-    image: "https://images.eezix.site/user-7122/site-8698/section-4312/u8ymkNblBvsewSdGcNiO6LKAVJxdpQ1QgTCb2YZ3.png"
+    image: "/images/iso-certification.png"
   },
 
   clients: [

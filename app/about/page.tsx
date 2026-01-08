@@ -20,12 +20,12 @@ export default function AboutPage() {
       description: "Achieved ISO 9001:2015 certification, demonstrating our commitment to quality management.",
     },
     {
-      year: "2018",
+      year: "2023",
       title: "Regional Expansion",
       description: "Expanded operations to Qatar and Saudi Arabia, serving international markets.",
     },
     {
-      year: "2023",
+      year: "2025",
       title: "Leading Firm",
       description: "Recognized as a leading design firm with 100+ successful projects serving the globe.",
     },
